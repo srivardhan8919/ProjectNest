@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProjectPro – Final-Year Project Assistance</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/sdk/3.6.2/email.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#hero">Home</a></li>
+        <li role="none"><a role="menuitem" href="#services">Services</a></li>
+        <li role="none"><a role="menuitem" href="#features">Why Us</a></li>
+        <li role="none"><a role="menuitem" href="#testimonials">Testimonials</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Expert Project Assistance - <b>ProjectNest</b></h1>
+      <p>Custom-built projects with live walkthroughs, documentation, and viva prep—tailored to your college syllabus.</p>
+      <a href="#contact" class="btn primary">Get Started</a>
+    </div>
+    <div class="floating-circle"></div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Standard Package</h3>
+        <p>Complete code + report + 2 recorded walkthroughs.</p>
+        <span class="price">₹1,499</span>
+      </div>
+      <div class="card">
+        <h3>Premium Package</h3>
+        <p>Standard + 2 live sessions + viva mock.</p>
+        <span class="price">₹2,999</span>
+      </div>
+      <div class="card">
+        <h3>Custom Package</h3>
+        <p>Your topic + weekly updates from scratch.</p>
+        <span class="price">₹3,999+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features container">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li class="test-card animate-on-scroll">Tailored to your syllabus</li>
+      <li class="test-card animate-on-scroll">Industry-standard code</li>
+      <li class="test-card animate-on-scroll">Live Q&A support</li>
+      <li class="test-card animate-on-scroll">100% plagiarism-free</li>
+      <li class="test-card animate-on-scroll">Flexible payments & revisions</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials container">
+    <h2>What Students Say</h2>
+    <div class="test-card animate-on-scroll">
+      <p>“ProjectPro delivered my AI project on time and viva prep made my defense a breeze!”</p>
+      <h4>— Aisha, CSE, 2025</h4>
+    </div>
+    <div class="test-card animate-on-scroll">
+      <p>“Their walkthroughs clarified every step—stress-free submission!”</p>
+      <h4>— Raj, IT, 2025</h4>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact container">
+    <h2>Submit Your Requirements</h2>
+    <form id="project-form" novalidate>
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" placeholder="Full Name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" placeholder="enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="college">College & Branch *</label>
+        <input id="college" name="college" type="text" placeholder="eg. VAGE CSM-A" required />
+      </div>
+      <div class="form-group">
+        <label for="title">Project Title *</label>
+        <input id="title" name="title" type="text" placeholder="Full name of project" required />
+      </div>
+      <div class="form-group">
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" placeholder="Full description of ur project or ur Requirements"></textarea>
+      </div>
+      <button type="submit" class="btn primary">Submit</button>
+      <p id="form-status" role="alert" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 ProjectPro. All rights reserved.</p>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
