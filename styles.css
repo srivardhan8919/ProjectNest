@@ -25,8 +25,8 @@
   /* Sticky Header */
   #header {
     position: sticky; top:0; width:100%;
-    background: #ffffff; z-index:1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #d9d7d7; z-index:1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.655);
   }
   .nav {
     display:flex; align-items:center; justify-content:space-between;
@@ -93,7 +93,7 @@
   }
   .card:hover {
     transform:translateY(-5px);
-    box-shadow:0 8px 24px rgba(6, 164, 255, 0.684);
+    box-shadow:0 8px 24px rgba(6, 180, 255, 0.684);
   }
   .price {
     display:block; margin-top:1rem; font-size:1.25rem;
@@ -140,9 +140,32 @@
   
   /* Footer */
   .footer {
-    background:#000e1deb; text-align:center; padding:2rem 0;
-    color:#94a9c7;
+    background: #d3d3d3;
+    color: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.529);
   }
+  
+  .footer p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .footer a {
+    color: #002b5a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: #0c1231;
+    font-weight: 700;
+  }
+  
   
   /* Animations */
   @keyframes float {
@@ -162,12 +185,14 @@
 
   /* Header & Nav */
   .nav {
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.3rem;
+    gap: 0.75;
   }
 
   .nav-links a {
-    font-size: 1rem;
-    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    padding: 0.1rem;
+    font-weight: 600;
   }
 
   /* Hero */
