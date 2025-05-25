@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectNest &ndash; Courses</title>
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="courses.css" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header id="header" class="sticky top-0 bg-white shadow-sm z-50">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
+      <a href="index.html" class="text-2xl font-extrabold text-primary hover:text-primary-dark transition-colors">
+        <i class="fas fa-graduation-cap mr-2"></i>ProjectNest
+      </a>
+      <ul class="hidden md:flex space-x-6 font-semibold" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+        <li role="none"><a role="menuitem" href="project.html" class="hover:text-primary transition-colors">Projects</a></li>
+        <li role="none"><a role="menuitem" href="courses.html" class="text-primary font-bold">Courses</a></li>
+        <li role="none"><a role="menuitem" href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+      <button id="nav-toggle" class="md:hidden focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden bg-white shadow-md">
+      <ul class="flex flex-col p-4 space-y-3 font-semibold">
+        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+        <li><a href="project.html" class="hover:text-primary transition-colors">Projects</a></li>
+        <li><a href="courses.html" class="text-primary font-bold">Courses</a></li>
+        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-r from-sky-100 to-white py-20 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-800">Our Courses</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Level up your skills with our carefully curated courses. Pick your path and start building today!
+      </p>
+      <div class="mt-8 flex justify-center space-x-4">
+        <button class="btn btn-primary">
+          <i class="fas fa-star mr-2"></i>Featured
+        </button>
+        <button class="btn btn-outline">
+          <i class="fas fa-clock mr-2"></i>New
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-sm p-4">
+      <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-filter text-primary"></i>
+          <span class="font-semibold">Filter by:</span>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <select id="level-filter" class="select-custom">
+            <option value="all">All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+          <select id="category-filter" class="select-custom">
+            <option value="all">All Categories</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+          </select>
+          <select id="duration-filter" class="select-custom">
+            <option value="all">Any Duration</option>
+            <option value="2">2 Weeks</option>
+            <option value="4">4 Weeks</option>
+            <option value="6">6 Weeks</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid -->
+  <section class="container mx-auto px-4 pb-16">
+    <div id="courses-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Web Development Course -->
+      <div class="course-card" 
+           data-level="Intermediate"
+           data-category="Web Development"
+           data-duration="4"
+           data-title="Full-Stack Web Development"
+           data-description="Master modern web development with React, Flask, and MongoDB. Build responsive websites and RESTful APIs from scratch.">
+        <div class="course-image">
+          <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" alt="Web Development" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">4 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Intermediate</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.8</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Full-Stack Web Development</h3>
+          <p class="text-gray-600 mb-4">Build responsive websites & RESTful APIs using React, Flask, and MongoDB.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">1.2k students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Science Course -->
+      <div class="course-card"
+           data-level="Advanced"
+           data-category="Data Science"
+           data-duration="4"
+           data-title="Data Science & Analytics"
+           data-description="Learn data analysis, visualization, and machine learning techniques using Python and popular data science libraries.">
+        <div class="course-image">
+          <img src="https://cdn.slidesharecdn.com/ss_thumbnails/datascience-220913060149-e4e5f214-thumbnail.jpg?width=560&fit=bounds" alt="Data Science" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">4 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Advanced</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.9</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Data Science & Analytics</h3>
+          <p class="text-gray-600 mb-4">Master data analysis and visualization with Python, Pandas, and Matplotlib.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">850 students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Machine Learning Course -->
+      <div class="course-card"
+           data-level="Intermediate"
+           data-category="Machine Learning"
+           data-duration="4"
+           data-title="Machine Learning Fundamentals"
+           data-description="Learn the fundamentals of machine learning, including supervised and unsupervised learning algorithms.">
+        <div class="course-image">
+          <img src="https://media.gettyimages.com/id/1556264506/video/machine-learning-an-animated-journey-through-ai-generated-energy-and-big-data.jpg?s=640x640&k=20&c=l_3OL8snb-0CiznL_mTXC5vpqMqbX7HflcG4uc4F2CA=" alt="Machine Learning" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">4 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Intermediate</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.7</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Machine Learning Fundamentals</h3>
+          <p class="text-gray-600 mb-4">Master ML algorithms and build intelligent applications with Python.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">950 students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Details Modal -->
+  <div id="course-modal" class="modal-overlay hidden">
+    <div class="modal-window">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <h2 id="modal-title" class="text-2xl font-semibold mb-4"></h2>
+        <div class="flex items-center space-x-4 mb-6">
+          <span id="modal-meta" class="text-primary font-medium"></span>
+          <div class="flex items-center">
+            <i class="fas fa-clock text-gray-400 mr-2"></i>
+            <span id="modal-duration" class="text-gray-600"></span>
+          </div>
+        </div>
+        <p id="modal-description" class="text-gray-700 mb-6"></p>
+        <div class="course-features mb-6">
+          <h3 class="font-semibold mb-3">What you'll learn:</h3>
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Hands-on projects</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Live sessions</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Posting on Linkedin</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>1-on-1 mentoring</span>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-end">
+          <a href="#contact" class="btn btn-primary enroll-btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Get Started</h2>
+        <form id="course-form" class="contact-form" novalidate>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+            </div>
+            <div class="form-group">
+              <label for="college">College & Branch *</label>
+              <input id="college" name="college" type="text" placeholder="eg. VAGE CSM-A" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="package">Select Course *</label>
+            <select id="package" name="package" required>
+              <option value="">Choose a Course</option>
+              <option value="standard">Web Development</option>
+              <option value="premium">Data Science</option>
+              <option value="custom">Machine Learning</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="details">Course Requirements</label>
+            <textarea id="details" name="details" rows="4" placeholder="Describe your project requirements"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">
+            <i class="fas fa-paper-plane mr-2"></i>Submit Requirements
+          </button>
+          <p id="form-status" class="mt-4 text-center" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="bg-white border-t py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-4">ProjectNest</h3>
+        <p class="text-gray-600">Master Machine learning projects & job-ready courses with mentorship.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+          <li><a href="project.html" class="text-gray-600 hover:text-primary">Projects</a></li>
+          <li><a href="courses.html" class="text-gray-600 hover:text-primary">Courses</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-primary">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center">
+            <i class="fas fa-envelope text-primary mr-2"></i>
+            <a href="mailto:naninone342@gmail.com" class="text-gray-600 hover:text-primary">naninone342@gmail.com</a>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-phone text-primary mr-2"></i>
+            <a href="tel:8919206043" class="text-gray-600 hover:text-primary">+91 8919206043</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="https://www.linkedin.com/in/srivardhan-nutenki-207b55249/" target="_blank" class="text-gray-600 hover:text-primary">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="https://github.com/srivardhan8919" class="text-gray-600 hover:text-primary">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/srivardhannani8919/" class="text-gray-600 hover:text-primary">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t mt-8 pt-8 text-center text-gray-600">
+      <p>&copy; 2025 ProjectNest. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+<!-- 2) Then your own script -->
+<script defer src="main.js"></script>
+
+</body>
+</html>

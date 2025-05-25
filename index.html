@@ -2,129 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ProjectPro – Final-Year Project Assistance</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/sdk/3.6.2/email.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectNest – Learn & Build</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    /* Animated gradient background */
+    #landing-animation {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(270deg, #0ea5e9, #0f172a, #0084a4);
+      background-size: 600% 600%;
+      animation: gradientShift 6s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Logo Text Style */
+    #logo {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+      opacity: 0;
+      transform: scale(0.9) translateY(40px);
+    }
+
+    #landing-animation.hidden {
+      display: none;
+    }
+
+    .selection-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #00f0ff;
+    }
+
+    .selection-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 255, 255, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      #logo {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header id="header">
-    <nav class="nav container" aria-label="Main navigation">
-      <ul class="nav-links" role="menubar">
-        <li role="none"><a role="menuitem" href="#hero">Home</a></li>
-        <li role="none"><a role="menuitem" href="#services">Services</a></li>
-        <li role="none"><a role="menuitem" href="#features">Why Us</a></li>
-        <li role="none"><a role="menuitem" href="#testimonials">Testimonials</a></li>
-        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+
+  <!-- Landing Animation -->
+  <div id="landing-animation">
+    <h1 id="logo">ProjectNest</h1>
+  </div>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Expert Project Assistance - <b>ProjectNest</b></h1>
-      <p>Custom-built projects with live walkthroughs, documentation, and viva prep—tailored to your college syllabus.</p>
-      <a href="#contact" class="btn primary">Get Started</a>
-    </div>
-    <div class="floating-circle"></div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services container">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Standard Package</h3>
-        <p>Complete code + report + 2 recorded walkthroughs.</p>
-        <span class="price">₹1,499</span>
-      </div>
-      <div class="card">
-        <h3>Premium Package</h3>
-        <p>Standard + 2 live sessions + viva mock.</p>
-        <span class="price">₹2,999</span>
-      </div>
-      <div class="card">
-        <h3>Custom Package</h3>
-        <p>Your topic + weekly updates from scratch.</p>
-        <span class="price">₹3,999+</span>
+  <section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 flex items-center justify-center px-4">
+    <div class="text-center max-w-4xl w-full">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-cyan-300">Welcome to ProjectNest</h1>
+      <p class="text-lg md:text-xl text-cyan-100 mb-10">Choose your path: Learn skills, build projects, or both.</p>
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <div class="selection-card bg-gray-800 p-8 rounded-xl shadow-lg w-full md:w-1/2">
+          <h2 class="text-2xl font-semibold mb-4 text-white">Build Project</h2>
+          <p class="text-gray-300 mb-6">Jump straight into creating your project with expert guidance.</p>
+          <a href="project.html" class="inline-block bg-cyan-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-cyan-400 transition">Start Building</a>
+        </div>
+        <div class="selection-card bg-gray-800 p-8 rounded-xl shadow-lg w-full md:w-1/2">
+          <h2 class="text-2xl font-semibold mb-4 text-white">Course + Project</h2>
+          <p class="text-gray-300 mb-6">Master skills through courses and apply them in real projects.</p>
+          <a href="courses.html" class="inline-block bg-cyan-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-cyan-400 transition">Explore Courses</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="features container">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li class="test-card animate-on-scroll">Tailored to your syllabus</li>
-      <li class="test-card animate-on-scroll">Industry-standard code</li>
-      <li class="test-card animate-on-scroll">Live Q&A support</li>
-      <li class="test-card animate-on-scroll">100% plagiarism-free</li>
-      <li class="test-card animate-on-scroll">Flexible payments & revisions</li>
-    </ul>
-  </section>
+  <script>
+    window.addEventListener('load', () => {
+      const logo = document.getElementById('logo');
+      const landing = document.getElementById('landing-animation');
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials container">
-    <h2>What Students Say</h2>
-    <div class="test-card animate-on-scroll">
-      <p>“ProjectNest delivered my AI project on time and viva prep made my defense a breeze!”</p>
-      <h4>— Aisha, CSE, 2025</h4>
-    </div>
-    <div class="test-card animate-on-scroll">
-      <p>“Their walkthroughs clarified every step—stress-free submission!”</p>
-      <h4>— Raj, CSM, 2025</h4>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section id="contact" class="contact container">
-    <h2>Submit Your Requirements</h2>
-    <form id="project-form" novalidate>
-      <div class="form-group">
-        <label for="name">Name *</label>
-        <input id="name" name="name" type="text" placeholder="Full Name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input id="email" name="email" type="email" placeholder="Enter your email" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number *</label>
-        <input id="phone" name="phone" type="number" placeholder="Enter your Phone number" required />
-      </div>
-      <div class="form-group">
-        <label for="college">College & Branch *</label>
-        <input id="college" name="college" type="text" placeholder="eg. VAGE CSM-A" required />
-      </div>
-      <div class="form-group">
-        <label for="title">Project Title *</label>
-        <input id="title" name="title" type="text" placeholder="Full name of project" required />
-      </div>
-      <div class="form-group">
-        <label for="details">Additional Details</label>
-        <textarea id="details" name="details" placeholder="Full description of ur project or ur Requirements"></textarea>
-      </div>
-      <button type="submit" class="btn primary">Submit</button>
-      <p id="form-status" role="alert" aria-live="polite"></p>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 ProjectNest. All rights reserved.</p>
-    <p><b>Have any queries?</b> Reach me out:</p>
-    <p>Email: <a href="mailto:naninone342@gmail.com">naninone342@gmail.com</a></p>
-    <p>Phone: <a href="tel:8919206043">8919206043</a></p>
-    <p>LinkedIn: 
-      <a href="https://www.linkedin.com/in/srivardhan-nutenki-207b55249/" target="_blank">
-        srivardhan-nutenki-207b55249
-      </a>
-    </p>
-  </footer>  
-
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-  <script src="main.js"></script>
+      anime({
+        targets: logo,
+        opacity: [0, 1],
+        translateY: [40, 0],
+        scale: [0.9, 1.1, 1],
+        duration: 2000,
+        easing: 'easeOutElastic(1, .6)',
+        complete: () => {
+          // slight pause before fade out
+          setTimeout(() => {
+            anime({
+              targets: landing,
+              opacity: [1, 0],
+              duration: 1000,
+              easing: 'easeOutQuad',
+              complete: () => {
+                landing.classList.add('hidden');
+              }
+            });
+          }, 1000);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectNest – Project Development</title>
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="project.css" />
+
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header id="header" class="sticky top-0 bg-white shadow-sm z-50">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3" aria-label="Main navigation">
+      <a href="index.html" class="text-2xl font-extrabold text-primary hover:text-primary-dark transition-colors">
+        <i class="fas fa-graduation-cap mr-2"></i>ProjectNest
+      </a>
+      <ul class="hidden md:flex space-x-6 font-semibold" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+        <li role="none"><a role="menuitem" href="project.html" class="text-primary font-bold">Projects</a></li>
+        <li role="none"><a role="menuitem" href="courses.html" class="hover:text-primary transition-colors">Courses</a></li>
+        <li role="none"><a role="menuitem" href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+      <button id="nav-toggle" class="md:hidden focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden bg-white shadow-md">
+      <ul class="flex flex-col p-4 space-y-3 font-semibold">
+        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+        <li><a href="project.html" class="text-primary font-bold">Projects</a></li>
+        <li><a href="courses.html" class="hover:text-primary transition-colors">Courses</a></li>
+        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section relative overflow-hidden">
+    <div class="container mx-auto px-4 py-20 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">
+          Expert Project Development
+          <span class="block text-cyan-300 mt-2">ProjectNest</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+          Custom-built projects with live walkthroughs, documentation, and viva prep—tailored to your college syllabus.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#packages" class="btn btn-primary">
+            <i class="fas fa-box-open mr-2"></i>View Packages
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane mr-2"></i>Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- Packages Section -->
+  <section id="packages" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Choose Your Package</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Standard Package -->
+        <div class="package-card">
+          <div class="package-header">
+            <h3 class="text-xl font-semibold">Standard Package</h3>
+            <div class="price">₹1,499</div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Complete source code</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Project documentation</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>2 recorded walkthroughs</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Basic support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full">Get Started</a>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="package-card featured">
+          <div class="package-badge">Most Popular</div>
+          <div class="package-header">
+            <h3 class="text-xl font-semibold">Premium Package</h3>
+            <div class="price">₹2,999</div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Everything in Standard</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>2 live sessions</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Viva preparation</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Priority support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full">Get Started</a>
+        </div>
+
+        <!-- Custom Package -->
+        <div class="package-card">
+          <div class="package-header">
+            <h3 class="text-xl font-semibold">Custom Package</h3>
+            <div class="price">₹3,999+</div>
+          </div>
+          <ul class="package-features">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Everything in Premium</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Weekly updates</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom features</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="feature-card">
+          <i class="fas fa-book text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Syllabus Aligned</h3>
+          <p>Projects tailored to your college curriculum and requirements.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-code text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Industry Standard</h3>
+          <p>Clean, efficient code following best practices and standards.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-comments text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Live Support</h3>
+          <p>Get instant help and clarification through live sessions.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">100% Original</h3>
+          <p>Plagiarism-free code with proper documentation.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-sync text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Flexible Updates</h3>
+          <p>Free revisions and modifications as per your needs.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-wallet text-4xl text-primary mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Easy Payments</h3>
+          <p>Flexible payment options with secure transactions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">What Students Say</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left text-primary text-2xl mb-4"></i>
+            <p class="text-gray-700 mb-4">"ProjectNest delivered my AI project on time and viva prep made my defense a breeze!"</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">A</div>
+              <div class="ml-4">
+                <h4 class="font-semibold">Aisha</h4>
+                <p class="text-gray-600">CSE, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <i class="fas fa-quote-left text-primary text-2xl mb-4"></i>
+            <p class="text-gray-700 mb-4">"Their walkthroughs clarified every step—stress-free submission!"</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">R</div>
+              <div class="ml-4">
+                <h4 class="font-semibold">Raj</h4>
+                <p class="text-gray-600">CSM, 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Get Started</h2>
+        <form id="project-form" class="contact-form" novalidate>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+            </div>
+            <div class="form-group">
+              <label for="college">College & Branch *</label>
+              <input id="college" name="college" type="text" placeholder="eg. VAGE CSM-A" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="package">Select Package *</label>
+            <select id="package" name="package" required>
+              <option value="">Choose a package</option>
+              <option value="standard">Standard Package</option>
+              <option value="premium">Premium Package</option>
+              <option value="custom">Custom Package</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="title">Project Title *</label>
+            <input id="title" name="title" type="text" placeholder="Enter project title" required />
+          </div>
+          <div class="form-group">
+            <label for="details">Project Requirements</label>
+            <textarea id="details" name="details" rows="4" placeholder="Describe your project requirements"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">
+            <i class="fas fa-paper-plane mr-2"></i>Submit Requirements
+          </button>
+          <p id="form-status" class="mt-4 text-center" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">ProjectNest</h3>
+          <p class="text-gray-600">Expert project development and guidance for students.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+            <li><a href="project.html" class="text-gray-600 hover:text-primary">Projects</a></li>
+            <li><a href="courses.html" class="text-gray-600 hover:text-primary">Courses</a></li>
+            <li><a href="#contact" class="text-gray-600 hover:text-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-primary mr-2"></i>
+              <a href="mailto:naninone342@gmail.com" class="text-gray-600 hover:text-primary">naninone342@gmail.com</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone text-primary mr-2"></i>
+              <a href="tel:8919206043" class="text-gray-600 hover:text-primary">+91 8919206043</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/srivardhan-nutenki-207b55249/" target="_blank" class="text-gray-600 hover:text-primary">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://github.com/srivardhan8919" class="text-gray-600 hover:text-primary">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/srivardhannani8919/" class="text-gray-600 hover:text-primary">
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t mt-8 pt-8 text-center text-gray-600">
+        <p>&copy; 2025 ProjectNest. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+<!-- 2) Then your own script -->
+<script defer src="main.js"></script>
+
+</body>
+</html>
