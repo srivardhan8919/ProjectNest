@@ -76,10 +76,10 @@
           </select>
           <select id="category-filter" class="select-custom">
             <option value="all">All Categories</option>
+            <option value="Programming">Programming</option>
             <option value="Web Development">Web Development</option>
             <option value="Data Science">Data Science</option>
             <option value="Machine Learning">Machine Learning</option>
-            <option value="UI/UX Design">UI/UX Design</option>
           </select>
           <select id="duration-filter" class="select-custom">
             <option value="all">Any Duration</option>
@@ -95,33 +95,69 @@
   <!-- Courses Grid -->
   <section class="container mx-auto px-4 pb-16">
     <div id="courses-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Web Development Course -->
-      <div class="course-card" 
-           data-level="Intermediate"
+
+      <!-- HTML/CSS/JS Course -->
+      <div class="course-card"
+           data-level="Beginner"
            data-category="Web Development"
-           data-duration="4"
-           data-title="Full-Stack Web Development"
-           data-description="Master modern web development with React, Flask, and MongoDB. Build responsive websites and RESTful APIs from scratch.">
+           data-duration="2"
+           data-title="HTML, CSS & JavaScript Basics"
+           data-description="Start your web development journey with the fundamentals. Learn HTML structure, CSS styling, and JavaScript interactivity."
+           data-fee="₹499">
         <div class="course-image">
-          <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" alt="Web Development" class="w-full h-48 object-cover" />
+          <img src="https://static.skillshare.com/uploads/video/thumbnails/c38251fc34fe43812b476c376c5d6945/1280-720" alt="Front-end development" class="w-full h-48 object-cover" />
           <div class="course-overlay">
-            <span class="badge">4 Weeks</span>
+            <span class="badge">2 Weeks</span>
           </div>
         </div>
         <div class="p-6">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-medium text-primary">Intermediate</span>
+            <span class="text-sm font-medium text-primary">Beginner</span>
             <div class="flex items-center">
               <i class="fas fa-star text-yellow-400"></i>
-              <span class="ml-1 text-sm">4.8</span>
+              <span class="ml-1 text-sm">4.6</span>
             </div>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Full-Stack Web Development</h3>
-          <p class="text-gray-600 mb-4">Build responsive websites & RESTful APIs using React, Flask, and MongoDB.</p>
+          <h3 class="text-xl font-semibold mb-2">HTML, CSS & JavaScript Basics</h3>
+          <p class="text-gray-600 mb-4">Master the fundamentals of web development with hands-on projects.</p>
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
               <i class="fas fa-users text-gray-400"></i>
-              <span class="text-sm text-gray-500">1.2k students</span>
+              <span class="text-sm text-gray-500">1.5k students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python Programming Course -->
+      <div class="course-card"
+           data-level="Beginner"
+           data-category="Programming"
+           data-duration="2"
+           data-title="Python Programming Masterclass"
+           data-description="Master Python programming from basics to advanced concepts. Learn data structures, OOP, file handling, and build real-world applications."
+           data-fee="₹499">
+        <div class="course-image">
+          <img src="https://www.dreamhost.com/blog/wp-content/uploads/2024/06/Transitioning-To-Python-3-730x548.webp" alt="Python Programming" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">2 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Beginner</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.7</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Python Programming Masterclass</h3>
+          <p class="text-gray-600 mb-4">From basics to advanced concepts with hands-on projects and real-world applications.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">1.8k students</span>
             </div>
             <button class="btn btn-primary text-sm view-details">View Details</button>
           </div>
@@ -134,7 +170,8 @@
            data-category="Data Science"
            data-duration="4"
            data-title="Data Science & Analytics"
-           data-description="Learn data analysis, visualization, and machine learning techniques using Python and popular data science libraries.">
+           data-description="Learn data analysis, visualization, and machine learning techniques using Python and popular data science libraries."
+           data-fee="₹499">
         <div class="course-image">
           <img src="https://cdn.slidesharecdn.com/ss_thumbnails/datascience-220913060149-e4e5f214-thumbnail.jpg?width=560&fit=bounds" alt="Data Science" class="w-full h-48 object-cover" />
           <div class="course-overlay">
@@ -167,7 +204,8 @@
            data-category="Machine Learning"
            data-duration="4"
            data-title="Machine Learning Fundamentals"
-           data-description="Learn the fundamentals of machine learning, including supervised and unsupervised learning algorithms.">
+           data-description="Learn the fundamentals of machine learning, including supervised and unsupervised learning algorithms."
+           data-fee="₹499">
         <div class="course-image">
           <img src="https://media.gettyimages.com/id/1556264506/video/machine-learning-an-animated-journey-through-ai-generated-energy-and-big-data.jpg?s=640x640&k=20&c=l_3OL8snb-0CiznL_mTXC5vpqMqbX7HflcG4uc4F2CA=" alt="Machine Learning" class="w-full h-48 object-cover" />
           <div class="course-overlay">
@@ -188,6 +226,74 @@
             <div class="flex items-center space-x-2">
               <i class="fas fa-users text-gray-400"></i>
               <span class="text-sm text-gray-500">950 students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced ML Course -->
+      <div class="course-card"
+           data-level="Advanced"
+           data-category="Machine Learning"
+           data-duration="6"
+           data-title="Advanced ML: CNN & Deep Learning"
+           data-description="Master advanced CNN architectures, transfer learning, and deep learning techniques. Build state-of-the-art computer vision models."
+           data-fee="₹799">
+        <div class="course-image">
+          <img src="https://cdn.shopaccino.com/igmguru/articles/deep-learning.jpg?v=531" alt="Advanced ML" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">6 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Advanced</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.9</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Advanced ML: CNN & Deep Learning</h3>
+          <p class="text-gray-600 mb-4">Master CNN architectures and build state-of-the-art computer vision models.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">650 students</span>
+            </div>
+            <button class="btn btn-primary text-sm view-details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development Course -->
+      <div class="course-card" 
+           data-level="Advanced"
+           data-category="Web Development"
+           data-duration="4"
+           data-title="Full-Stack Web Development"
+           data-description="Master modern web development with React, Flask, and MongoDB. Build responsive websites and RESTful APIs from scratch."
+           data-fee="₹1,999">
+        <div class="course-image">
+          <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg" alt="Web Development" class="w-full h-48 object-cover" />
+          <div class="course-overlay">
+            <span class="badge">4 Weeks</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-medium text-primary">Advanced</span>
+            <div class="flex items-center">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="ml-1 text-sm">4.8</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Full-Stack Web Development</h3>
+          <p class="text-gray-600 mb-4">Build responsive websites & RESTful APIs using React, Flask, and MongoDB.</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-users text-gray-400"></i>
+              <span class="text-sm text-gray-500">1.2k students</span>
             </div>
             <button class="btn btn-primary text-sm view-details">View Details</button>
           </div>
@@ -231,6 +337,18 @@
             </li>
           </ul>
         </div>
+        <div class="course-fee mb-6 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-semibold text-gray-800">Course Fee</h4>
+              <p class="text-sm text-gray-600">Inclusive of all taxes</p>
+            </div>
+            <div class="text-right">
+              <span id="modal-fee" class="text-2xl font-bold text-primary"></span>
+              <p class="text-sm text-gray-600">One-time payment</p>
+            </div>
+          </div>
+        </div>
         <div class="flex justify-end">
           <a href="#contact" class="btn btn-primary enroll-btn">Enroll Now</a>
         </div>
@@ -266,9 +384,12 @@
             <label for="package">Select Course *</label>
             <select id="package" name="package" required>
               <option value="">Choose a Course</option>
-              <option value="Web-Development">Web Development</option>
+              <option value="HTML-CSS-JS">HTML, CSS & Basic JavaScript</option>
+              <option value="Python-Programming">Python Programming</option>
               <option value="Data-Science">Data Science</option>
               <option value="Machine-Learning">Machine Learning</option>
+              <option value="Advanced-Machine-Learning">Advanced Machine Learning</option>
+              <option value="Full-Stack-Web-Development">Full-Stack Development</option>
             </select>
           </div>
           <div class="form-group">

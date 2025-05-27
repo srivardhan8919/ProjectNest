@@ -175,6 +175,7 @@ function initCoursePageUI() {
       document.getElementById('modal-description').textContent = card.dataset.description;
       document.getElementById('modal-meta')       .textContent = `${card.dataset.level} • ${card.dataset.category}`;
       document.getElementById('modal-duration')   .textContent = `${card.dataset.duration} Weeks`;
+      document.getElementById('modal-fee')        .textContent = card.dataset.fee;
       modal.classList.remove('hidden');
       setTimeout(() => modal.classList.add('active'), 10);
       document.body.style.overflow = 'hidden';
