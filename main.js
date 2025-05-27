@@ -142,14 +142,21 @@ function initGlobalUI() {
 }
 
 function initCoursePageUI() {
+  console.log('Course page UI initialization started');
+  
   // Only run if level-filter exists
-  if (!document.getElementById('level-filter')) return;
+  if (!document.getElementById('level-filter')) {
+    console.log('Level filter not found, returning');
+    return;
+  }
 
   // Filtering
   const lvl = document.getElementById('level-filter'),
         cat = document.getElementById('category-filter'),
         dur = document.getElementById('duration-filter'),
         cards = document.querySelectorAll('.course-card');
+  
+  console.log('Found course cards:', cards.length);
 
   function apply() {
     const lv = lvl.value, ct = cat.value, dr = dur.value;
@@ -166,16 +173,28 @@ function initCoursePageUI() {
   // Modal
   const modal = document.getElementById('course-modal');
   const close = modal?.querySelector('.modal-close');
+  
+  console.log('Modal element:', modal);
+  console.log('Close button:', close);
 
   document.querySelectorAll('.view-details').forEach(btn => {
     btn.addEventListener('click', () => {
+      console.log('View details button clicked');
       const card = btn.closest('.course-card');
-      if (!card) return;
-      document.getElementById('modal-title')      .textContent = card.dataset.title;
+      if (!card) {
+        console.log('No course card found');
+        return;
+      }
+      console.log('Course card data:', card.dataset);
+      
+      document.getElementById('modal-title').textContent = card.dataset.title;
       document.getElementById('modal-description').textContent = card.dataset.description;
-      document.getElementById('modal-meta')       .textContent = `${card.dataset.level} • ${card.dataset.category}`;
-      document.getElementById('modal-duration')   .textContent = `${card.dataset.duration} Weeks`;
-      document.getElementById('modal-fee')        .textContent = card.dataset.fee;
+      document.getElementById('modal-meta').textContent = `${card.dataset.level} • ${card.dataset.category}`;
+      document.getElementById('modal-duration').textContent = `${card.dataset.duration} Weeks`;
+      document.getElementById('modal-fee').textContent = card.dataset.fee;
+      
+      console.log('Setting modal fee to:', card.dataset.fee);
+      
       modal.classList.remove('hidden');
       setTimeout(() => modal.classList.add('active'), 10);
       document.body.style.overflow = 'hidden';
